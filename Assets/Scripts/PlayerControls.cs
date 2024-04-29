@@ -10,7 +10,7 @@ public class PlayerControls : MonoBehaviour
     [Header(" Game Controller Object for controlling the game")]
     public GameController gameController;
     [Header("Defalt Score")]
-    public float velocity = 1;
+    public float velocity = 5;
     private Rigidbody2D rb;
     private float objectHight;
     // Start is called before the first frame update
