@@ -9,7 +9,7 @@ public class PlayerControls : MonoBehaviour
 {
     [Header(" Game Controller Object for controlling the game")]
     public GameController gameController;
-    [Header("Defalt Score")]
+    [Header("Default Score")]
     public float velocity = 5;
     private Rigidbody2D rb;
     private float objectHight;
@@ -30,5 +30,12 @@ public class PlayerControls : MonoBehaviour
             rb.velocity = Vector2.up * velocity;
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "HighSpike" || collision.gameObject.tag == "LowSpike" || collision.gameObject.tag == "Ground") ;
+        {
+            Time.timeScale = 0;
+        }
+    }
 }
+    
